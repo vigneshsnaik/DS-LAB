@@ -1,3 +1,3 @@
 # DS-LAB
-Programs for DS Lab for KTU S3
+Programs for DS Lab  KTU S3
 
