@@ -64,8 +64,8 @@ void addsparse(matrix a[], matrix b[], matrix c[])
                 bi++;
                 ai++;
             }
-            ci++;
         }
+        ci++;
     }
     c[0].val=ci-1;
 }
