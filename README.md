@@ -1,8 +1,8 @@
 # DS-LAB
 Programs for DS Lab KTU S3
 ## <a href=https://github.com/vigneshsnaik/DS-LAB/tree/main/cycle1>Cycle 1</a>
-### <a href=https://github.com/vigneshsnaik/DS-LAB/blob/main/cycle1/1.1_Polynomial_Addition.c>1.1 Polynomial Addition</a>
-### <a href=https://github.com/vigneshsnaik/DS-LAB/blob/main/cycle1/1.2_Polynomial_Evaluvation.c>1.2 Polynomial Evaluvation</a>
-### <a href=https://github.com/vigneshsnaik/DS-LAB/blob/main/cycle1/1.3_Sparse_represntation_and_Sparsity.c>1.3 Sparse represntation and Sparsity</a>
-### <a href=https://github.com/vigneshsnaik/DS-LAB/blob/main/cycle1/1.4_Sparse_Addition.c>1.4 Sparse Addition</a>
-### <a href=https://github.com/vigneshsnaik/DS-LAB/blob/main/cycle1/1.5_Sparse_Fast_Transpose.c>1.5 Sparse Fast Transpose</a>
+### <a href=https://github.com/vigneshsnaik/DS-LAB/tree/main/cycle1/Docs/Polynomial%20Addition.md>Polynomial Addition</a>
+### <a href=https://github.com/vigneshsnaik/DS-LAB/tree/main/cycle1/Docs/Polynomial%20Evaluvation.md>Polynomial Evaluvation</a>
+### <a href=https://github.com/vigneshsnaik/DS-LAB/tree/main/cycle1/Docs/Sparse%20Represntation%20and%20Sparsity.md>Sparse Represntation and Sparsity</a>
+### <a href=https://github.com/vigneshsnaik/DS-LAB/tree/main/cycle1/Docs/Sparse%20Addition.md>Sparse Addition</a>
+### <a href=https://github.com/vigneshsnaik/DS-LAB/tree/main/cycle1/Docs/Sparse%20Fast%20Transpose.md>Sparse Fast Transpose</a>
