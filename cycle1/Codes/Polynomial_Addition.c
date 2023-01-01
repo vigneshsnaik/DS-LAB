@@ -51,7 +51,7 @@ int addpoly(poly a[], int startA, int endA, int startB, int endB, int startSum)
             startSum++;
         }
     }
-    return startSum-1;
+    return startSum - 1;
 }
 
 void main()
