@@ -8,6 +8,7 @@ Programs for DS Lab KTU S3
 ### <a href=https://github.com/vigneshsnaik/DS-LAB/tree/main/cycle1/Codes/Sparse_Fast_Transpose.c>Sparse Fast Transpose</a>
 ### <a href=https://github.com/vigneshsnaik/DS-LAB/tree/main/cycle1/Codes/Sparse_Transpose.c>Sparse Transpose</a>
 ##  <a href=https://github.com/vigneshsnaik/DS-LAB/tree/main/cycle2>Cycle 2</a>
-### <a href=https://github.com/vigneshsnaik/DS-LAB/tree/main/cycle2/Codes/Stack.c>Stack</a>
+### <a href=https://github.com/vigneshsnaik/DS-LAB/tree/main/cycle2/Codes/Simple_Stack.c>Stack</a>
 ### <a href=https://github.com/vigneshsnaik/DS-LAB/tree/main/cycle2/Codes/Two_Stack.c>Two Stack</a>
 ### <a href=https://github.com/vigneshsnaik/DS-LAB/tree/main/cycle2/Codes/Min_Element.c>Minimum Element in a stack</a>
+### <a href=https://github.com/vigneshsnaik/DS-LAB/tree/main/cycle2/Codes/Sorted_Push.c>Sorting a stack</a>
