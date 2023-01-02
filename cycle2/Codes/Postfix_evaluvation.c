@@ -2,12 +2,14 @@
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <math.h>
 #include "colours.h"
 #include "Stack_char.h"
 
 #define MAXSIZE 50
 char infix[MAXSIZE], postfix[MAXSIZE], tmpStack[MAXSIZE];
-int tmpTop = -1, postTop = -1;
+float valStack[MAXSIZE];
+int tmpTop = -1, postTop = -1, valTop = -1;
 
 // display the elements in the stack
 void displayStack(char stack[], int *top)
@@ -26,9 +28,10 @@ void displayStack(char stack[], int *top)
 void help()
 {
     printf("Options:(case sensitive)\n");
-    printf("infix <expression>  Push an expression to obtain its postfix\n");
-    printf("clear               Clear the Terminal screen\n");
-    printf("exit                Exits the program\n");
+    printf("infix <expression>    Push an expression to obtain its postfix and evaluvate it\n");
+    printf("postfix <expression>  Push an expression to obtain its postfix and evaluvate it\n");
+    printf("clear                 Clear the Terminal screen\n");
+    printf("exit                  Exits the program\n");
 }
 int priority(char x)
 {
@@ -67,6 +70,66 @@ void infixtopostfix()
     while (!isEmpty(tmpStack, &tmpTop))
         push(postfix, &postTop, pop(tmpStack, &tmpTop), MAXSIZE);
 }
+
+// checks if stack is full
+int isFullFloat(float stack[], int *top, int size)
+{
+    if (*top >= size)
+        return 1;
+    else
+        return 0;
+}
+
+// checks if stack is Empty
+int isEmptyFloat(float stack[], int *top)
+{
+    if (*top == -1)
+        return 1;
+    else
+        return 0;
+}
+
+// Push element into *top of stack
+int pushFloat(float stack[], int *top, int data, int size)
+{
+    if (!isFullFloat(stack, &*top, size))
+    {
+        stack[++*top] = data;
+        return stack[*top];
+    }
+}
+
+// Pop the *top element
+int popFloat(float stack[], int *top)
+{
+    if (!isEmptyFloat(stack, &*top))
+        return stack[(*top)--];
+    else
+        return 0;
+}
+
+float postfixEvaluvate()
+{
+    char ch;
+    int i;
+    for (i = 0; postfix[i] != '\0'; i++)
+    {
+        ch = postfix[i];
+        if (isdigit(ch))
+            pushFloat(valStack, &valTop, ch - 48.0, MAXSIZE);
+        else if (ch == '+')
+            pushFloat(valStack, &valTop, (popFloat(valStack, &valTop) + popFloat(valStack, &valTop)), MAXSIZE);
+        else if (ch == '-')
+            pushFloat(valStack, &valTop, (popFloat(valStack, &valTop) - popFloat(valStack, &valTop)), MAXSIZE);
+        else if (ch == '*')
+            pushFloat(valStack, &valTop, (popFloat(valStack, &valTop) * popFloat(valStack, &valTop)), MAXSIZE);
+        else if (ch == '/')
+            pushFloat(valStack, &valTop, (popFloat(valStack, &valTop) / popFloat(valStack, &valTop)), MAXSIZE);
+        else if (ch == '^')
+            pushFloat(valStack, &valTop, pow(popFloat(valStack, &valTop), popFloat(valStack, &valTop)), MAXSIZE);
+    }
+    return valStack[valTop];
+}
 void main()
 {
     int n, i;
@@ -82,8 +145,17 @@ void main()
             tmpTop = -1;
             postTop = -1;
             scanf("%[^\n]s", infix);
+            printf("Postfix :");
             infixtopostfix();
             displayStack(postfix, &postTop);
+            printf("Value = %f\n", postfixEvaluvate(postfix));
+        }
+        else if (!strcmp("postfix", cmd))
+        {
+            tmpTop = -1;
+            postTop = -1;
+            scanf("%[^\n]s", postfix);
+            printf("Value = %f\n", postfixEvaluvate(postfix));
         }
         else if (!strcmp("help", cmd))
             help();

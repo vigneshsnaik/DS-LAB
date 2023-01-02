@@ -9,6 +9,7 @@
 
 int stack[MAXSIZE], auxStack[MAXSIZE], top = -1, auxTop = -1;
 
+
 // displays help message
 void help()
 {
