@@ -70,7 +70,7 @@ void displayStack(char stack[], int *top)
 void help()
 {
     printf("Options:(case sensitive)\n");
-    printf("push <expression>   Push an expression to obtain its postfix\n");
+    printf("infix <expression>  Push an expression to obtain its postfix\n");
     printf("clear               Clear the Terminal screen\n");
     printf("exit                Exits the program\n");
 }
@@ -121,7 +121,7 @@ void main()
     {
         printf(YEL ">>>> " RESET);
         scanf("%s", cmd);
-        if (!strcmp("push", cmd))
+        if (!strcmp("infix", cmd))
         {
             tmpTop = -1;
             postTop = -1;
