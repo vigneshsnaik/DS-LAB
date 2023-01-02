@@ -12,4 +12,4 @@ Programs for DS Lab KTU S3
 <a href=https://github.com/vigneshsnaik/DS-LAB/tree/main/cycle2/Codes/Two_Stack.c>Two Stack</a><br>
 <a href=https://github.com/vigneshsnaik/DS-LAB/tree/main/cycle2/Codes/Min_Element.c>Minimum Element in a stack</a><br>
 <a href=https://github.com/vigneshsnaik/DS-LAB/tree/main/cycle2/Codes/Sorted_Push.c>Sorting a stack</a><br>
-<a href=https://github.com/vigneshsnaik/DS-LAB/tree/main/cycle2/Codes/Infix_topostfix.c>Infix to Postfix Conversion</a><br>
+<a href=https://github.com/vigneshsnaik/DS-LAB/tree/main/cycle2/Codes/Infix_to_postfix.c>Infix to Postfix Conversion</a><br>
