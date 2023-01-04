@@ -20,21 +20,23 @@ void display(Node *Head)
 void help()
 {
     printf("Options:(case sensitive)\n");
-    printf("insert <VALUES>       insertes elements to the *top of stack(or TOS) recursively\n");
-    printf("                    Enter each values seperated by \",\"\n");
-    printf("                    eg. \"insert 1\" or \"insert 1,2,3,4,5\"\n");
-    printf("remove Back                removes the element at the *top of stack(or TOS)\n");
-    printf("remove front        removes elements from the *top of stack(or TOS) recursively n times\n");
-    printf("peek                Shows the elements at the top of stack(or TOS)\n");
-    printf("help                Displays this message\n");
-    printf("clear               Clear the Terminal screen\n");
-    printf("exit                Exits the program\n");
+    printf("insert from <POSITION>    insertes elements to the POSITION recursively\n");
+    printf("                          POSITION='front' 'back' or any integer value \n");
+    printf("                          Enter each values seperated by ','\n");
+    printf("                          eg. 'insert at front 1' or 'insert at 1 1,2,3,4,5'\n");
+    printf("delete from <POSITION>    Deletes the element at the POSITION recursively\n");
+    printf("                          POSITION='front' 'back' or any integer value \n");
+    printf("                          eg. 'delete from front' or 'delete from 5 3 times'\n");
+    printf("help                      Displays this message\n");
+    printf("clear                     Clear the Terminal screen\n");
+    printf("exit                      Exits the program\n");
 }
 void main()
 {
     int i;
     char cmd[10], val[20], *temp;
     Node *head1 = (Node *)malloc(sizeof(Node));
+
     system("clear"); // clears the terminal for a CLI-like interface
     help();
     while (1)
@@ -50,7 +52,8 @@ void main()
                 temp = strtok(val, ",");
                 while (temp != NULL)
                 {
-                    printf(GRN "%d inserted\n", insertAtBack(&*head1, atoi(temp)));
+                    if (atoi(temp))
+                        printf(GRN "%d inserted\n", insertAtBack(&*head1, atoi(temp)));
                     temp = strtok(NULL, ",");
                 }
             }
@@ -59,7 +62,8 @@ void main()
                 temp = strtok(val, ",");
                 while (temp != NULL)
                 {
-                    printf(GRN "%d inserted\n", insertAtFront(&*head1, atoi(temp)));
+                    if (atoi(temp))
+                        printf(GRN "%d inserted\n", insertAtFront(&*head1, atoi(temp)));
                     temp = strtok(NULL, ",");
                 }
             }
@@ -68,7 +72,8 @@ void main()
                 temp = strtok(val, ",");
                 while (temp != NULL)
                 {
-                    printf(GRN "%d inserted\n", insertAtPosition(&*head1, atoi(temp), atoi(cmd)));
+                    if (atoi(temp))
+                        printf(GRN "%d inserted\n", insertAtPosition(&*head1, atoi(temp), atoi(cmd)));
                     temp = strtok(NULL, ",");
                 }
             }
@@ -92,7 +97,7 @@ void main()
                     for (i = 1; i <= atoi(val); i++)
                         printf(GRN "%i Deleted\n", deleteFromFront(&*head1));
                 else
-                    printf("%i Deleted\n", deleteFromFront(&*head1));
+                    printf(GRN "%i Deleted\n", deleteFromFront(&*head1));
             else if (isdigit(cmd[0]))
             {
                 if (scanf("%[^\n]s", val))
