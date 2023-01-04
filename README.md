@@ -15,4 +15,4 @@ Programs for DS Lab KTU S3
 <a href=https://github.com/vigneshsnaik/DS-LAB/tree/main/cycle2/Codes/Infix_to_postfix.c>Infix to Postfix Conversion</a><br>
 <a href=https://github.com/vigneshsnaik/DS-LAB/tree/main/cycle2/Codes/Postfix_evaluvation.c>Postfix Evaluvation</a><br>
 ##  <a href=https://github.com/vigneshsnaik/DS-LAB/tree/main/cycle3>Cycle 3</a>
-<a href=https://github.com/vigneshsnaik/DS-LAB/tree/main/cycleC/Codes/linkedlist.c>Singly Linked List</a><br>
+<a href=https://github.com/vigneshsnaik/DS-LAB/tree/main/cycle3/Codes/linkedlist.c>Singly Linked List</a><br>
