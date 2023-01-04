@@ -5,8 +5,7 @@ int isFull(int stack[], int *top, int size)
 {
     if (*top >= size)
         return 1;
-    else
-        return 0;
+    return 0;
 }
 
 // checks if stack is Empty
@@ -14,8 +13,7 @@ int isEmpty(int stack[], int *top)
 {
     if (*top == -1)
         return 1;
-    else
-        return 0;
+    return 0;
 }
 
 // Push element into *top of stack
@@ -33,8 +31,7 @@ int pop(int stack[], int *top)
 {
     if (!isEmpty(stack, &*top))
         return stack[(*top)--];
-    else
-        return 0;
+    return 0;
 }
 
 // Peek the top element
@@ -42,8 +39,7 @@ int peek(int stack[], int *top)
 {
     if (!isEmpty(stack, &*top))
         return stack[*top];
-    else
-        return 0;
+    return 0;
 }
 // display the elements in the stack
 void displayStack(int stack[], int *top)
